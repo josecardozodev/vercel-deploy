@@ -1,0 +1,160 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #140f27;
+  color: #f9fafb;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 8px;
+}
+
+p {
+  color: #9ca3af;
+  margin-bottom: 32px;
+}
+
+.contador {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.contador div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 24px 18px;
+  background: #241f37;
+  border: 1px solid #403769;
+  border-radius: 12px;
+}
+
+.contador strong {
+  font-size: 2.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.contador span {
+  margin-top: 8px;
+  color: #9ca3af;
+}
+
+
+.lista-informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 850px;
+  margin: 48px auto 0;
+}
+
+.item-horizontal {
+  display: grid;
+  grid-template-columns: 210px 90px 1fr;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  min-height: 170px;
+  padding: 12px;
+
+  background: #f9fafb;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  text-align: left;
+}
+
+.item-divider {
+  width: 100%;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  height: 1px;
+}
+
+.item-imagem {
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.item-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.item-numero {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.item-texto h2 {
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+}
+
+.item-texto p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 650px) {
+  .lista-informacoes {
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .item-horizontal {
+    grid-template-columns: 90px 55px 1fr;
+    gap: 12px;
+    min-height: 130px;
+    padding: 10px;
+  }
+
+  .item-imagem {
+    height: 200px
+  }
+
+  .item-numero {
+    font-size: 1.7rem;
+  }
+
+  .item-texto h2 {
+    font-size: 1rem;
+  }
+
+  .item-texto p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
